@@ -1,14 +1,16 @@
-/*
-  Sistema de control embebido para apertura automatizada de ventanas
-  Proyecto TFG – Media_Lab 2023–2025
-  Autor: A. Vilas
+Sistema embebido para apertura automatizada de ventanas  
+Proyecto TFG – Media_Lab 2025  
+Autor: A. Vilas
 
-  Este código implementa la lógica principal del sistema de ventilación natural,
-  basado en el control de un motor paso a paso mediante un algoritmo proporcional
-  que calcula el grado de apertura óptimo en función de temperatura interior,
-  temperatura exterior y concentración de CO₂. Incluye lectura de sensores,
-  control de movimiento, comunicación MQTT con aplicación móvil y gestión de seguridad
-  mediante finales de carrera físicos.
+Implementación de la lógica principal de un sistema de ventilación natural
+mediante control de un motor paso a paso. El algoritmo calcula el grado de
+apertura óptimo en función de la temperatura interior, temperatura exterior
+y concentración de CO₂.
 
-  Requiere plataforma ESP32, protocolo MQTT y periféricos externos especificados en la memoria del TFG.
-*/
+El firmware incluye:
+- Lectura de sensores ambientales
+- Control de motor paso a paso
+- Comunicación MQTT con aplicación móvil
+- Gestión de seguridad mediante finales de carrera
+
+Requiere plataforma ESP32, protocolo MQTT y periféricos descritos en la memoria del TFG.
