@@ -1,5 +1,5 @@
 /*
- Media_Lab 2023. A. Vilas
+ Media_Lab 2025. A. Vilas
 */
 
 //////////////////// LIBRERÍAS ////////////////////
@@ -63,24 +63,18 @@ const int pinAzul = 12;
 #define swaperturapin 35
 #define swcierrepin 34
 
-// PWM
-const int frequency = 500;
-const int pwm_channel = 0;
-const int resolution = 8;
-
 // Variables control
 float tmax = 50;
 float tmin = 5;
-bool automatic = false;
-int estado = 0; // 1-cerrado, 2-abierto, 3-cerrando, 4-abriendo
-bool accionadoencoder = false;
+bool  automatic = false;
+int   estado = 0; // 1-cerrado, 2-abierto, 3-cerrando, 4-abriendo
+bool  accionadoencoder = false;
 
 // ---------------------
 // CONFIGURACIÓN MQTT
 // ---------------------
-//const char* mqtt_server = "test.mosquitto.org";
 const char* mqtt_server = "ventanaiot.cloud.shiftr.io";
-const int mqtt_port = 1883;
+const int   mqtt_port = 1883;
 const char* mqtt_user = "ventanaiot";              // Tu instancia
 const char* mqtt_password = "4orRA8Ga2donb2x5";    // Token generado en el dashboard
 
@@ -96,7 +90,7 @@ const char* topic_horario = "casa/ventana/horario/#";
 const char* topic_peso = "casa/ventana/peso/#";
 
 // Variables de estado
-int posicionVentana = 0;
+int  posicionVentana = 0;
 bool autoMode = false;
 bool calibrar = false;
 
@@ -107,10 +101,10 @@ const int   daylightOffset_sec = 3600; // Horario de verano
 
 // Configuración adicional
 bool horarioActivo = false;
-int horaInicio = 7;
-int minutoInicio = 0;
-int horaFin = 21;
-int minutoFin = 0;
+int  horaInicio = 7;
+int  minutoInicio = 0;
+int  horaFin = 21;
+int  minutoFin = 0;
 
 int pesoTemperatura = 25;
 int pesoCO2 = 50;
@@ -307,10 +301,8 @@ float obtenerTemperatura() {
 
     if (lastIndex != -1) {
       String lastJson = fullPayload.substring(lastIndex);
-
-      // Se recomienda usar JsonDocument directamente
       const size_t capacity = 6 * 1024;
-      JsonDocument doc;  // Nuevo uso sin DynamicJsonDocument
+      JsonDocument doc;
       //doc.garbageCollect(); // Recomendado si se reutiliza
       DeserializationError error = deserializeJson(doc, lastJson);
 
