@@ -1,7 +1,5 @@
 /*
-  main.cpp — organización visual y comentarios sin cambios funcionales
-  - Mantiene la misma lógica y llamadas a funciones extraídas en módulos.
-  - Solo ajusta formato, comentarios y orden de secciones para mejor lectura.
+  Media_Lab 2025. Autor: A.Vilas
 */
 
 #include <Arduino.h>
@@ -29,7 +27,7 @@ void setup()
   pinMode(pinVerde, OUTPUT);
   pinMode(pinAzul, OUTPUT);
 
-  // --- Pines de control del motor DC ------------------------------------
+  // --- Pines de control del motor ------------------------------------
   pinMode(ENA, OUTPUT);
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
