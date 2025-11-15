@@ -58,3 +58,6 @@ pio device monitor
 - No subas `include/secrets.h` al repositorio (está en `.gitignore`).
 - Usa `include/secrets.example.h` como plantilla.
 
+---------------------------------------------------------------------------
+
+
